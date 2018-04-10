@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="46px" height="46px" viewBox="0 0 46 46" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 44.1 (41455) - http://www.bohemiancoding.com/sketch -->
+    <title>关停</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="线-copy" transform="translate(-227.000000, -355.000000)" fill-rule="nonzero" fill="#3F3C40">
+            <g id="3" transform="translate(100.000000, 338.000000)">
+                <g id="关停" transform="translate(127.000000, 17.000000)">
+                    <path d="M23,46 C10.2974508,46 0,35.7025492 0,23 C0,10.2974508 10.2974508,0 23,0 C35.7025492,0 46,10.2974508 46,23 C46,35.7025492 35.7025492,46 23,46 Z M23,44 C34.5979797,44 44,34.5979797 44,23 C44,11.4020203 34.5979797,2 23,2 C11.4020203,2 2,11.4020203 2,23 C2,34.5979797 11.4020203,44 23,44 Z M8,23 C8,22.4477153 8.44736519,22 8.99815369,22 L37.0018463,22 C37.5531114,22 38,22.4438648 38,23 C38,23.5522847 37.5526348,24 37.0018463,24 L8.99815369,24 C8.44688863,24 8,23.5561352 8,23 Z" id="Combined-Shape"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

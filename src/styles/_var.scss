@@ -1,0 +1,29 @@
+// global variables
+// *** color ***/
+$color-primary: #2aaeff;
+$color-blue: #28a3fe;
+
+// Function
+$rem: 40;
+
+$flexs: (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12);
+
+$bem: (
+  debug: false,
+  separator: (
+    element: "__",
+    modifier: "--", "state": "-"
+  ),
+  namespace: (
+    component: "ykc",
+    hack: "_",
+    object: "yk",
+    scope: "s",
+    test: "qa",
+    theme: "t",
+    utility: "yku"
+  ),
+  shortcodes: (
+    ab: ("before", "after")
+  )
+) !default;

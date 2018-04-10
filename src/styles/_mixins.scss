@@ -1,0 +1,150 @@
+@charset "utf-8";
+
+// 盒子大小
+@mixin wh($w, $h) {
+  width: $w;
+  height: $h;
+  line-height: $h;
+}
+
+// 正方形盒子
+@mixin square($len) {
+  width: $len;
+  height: $len;
+  line-height: $len;
+  text-align: center;
+}
+
+// 高度与行高
+@mixin hlh($height) {
+  height: $height;
+  line-height: $height;
+}
+
+//文字溢出
+@mixin text-overflow() {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+// 清楚浮动
+@mixin clearfix {
+  zoom: 1;
+
+  &:after {
+    display: block;
+    height: 0;
+    clear: both;
+    content: "";
+    visibility: hidden;
+  }
+}
+
+// 水平居中
+@mixin horizontal-center($width) {
+  width: $width;
+  margin: 0 auto;
+}
+
+// 透明度
+@mixin opacity($opacity) {
+  opacity: $opacity / 100;
+  filter: alpha(opacity=$opacity);
+}
+
+// 圆形盒子
+@mixin radius-box($len) {
+  border-radius: 50%;
+
+  @include square($len);
+}
+
+// 扁型圆形盒子
+@mixin radius-flat-box($w, $h) {
+  padding: 0 $h / 2;
+  border-radius: $h / 2;
+
+  @include wh($w, $h);
+}
+
+// 动画时间
+@mixin transition($time) {
+  transition: $time;
+}
+
+//动画放大
+@mixin scale($x) {
+  transform: scale($x);
+}
+
+//旋转
+@mixin rotate($deg) {
+  transform: rotate($deg);
+}
+
+@mixin op($op) {
+  opacity: $op / 100;
+  filter: alpha(opacity = $op);
+}
+
+// placeholder
+@mixin placeholder-color($color) {
+  input::-webkit-input-placeholder,
+  textarea::-webkit-input-placeholder {
+    color: $color;
+  }
+
+  input:-moz-placeholder,
+  textarea:-moz-placeholder {
+    color: $color;
+  }
+
+  input::-moz-placeholder,
+  textarea::-moz-placeholder {
+    color: $color;
+  }
+
+  input:-ms-input-placeholder,
+  textarea:-ms-input-placeholder {
+    color: $color;
+  }
+}
+// 动画animation Mixins
+// --------------------------------------------------
+
+@mixin animation($animation) {
+  animation: $animation;
+}
+
+@mixin animation-duration($duration) {
+  animation-duration: $duration;
+}
+
+@mixin animation-direction($direction) {
+  animation-direction: $direction;
+}
+
+@mixin animation-timing-function($animation-timing) {
+  animation-timing-function: $animation-timing;
+}
+
+@mixin animation-fill-mode($fill-mode) {
+  animation-fill-mode: $fill-mode;
+}
+
+@mixin animation-name($name...) {
+  animation-name: $name;
+}
+
+@mixin animation-iteration-count($count) {
+  animation-iteration-count: $count;
+}
+
+@mixin animation($name, $duration, $timing, $count) {
+  animation-name: $name;
+  animation-duration: $duration;
+  animation-timing-function: $timing;
+  animation-iteration-count: $count;
+}
+

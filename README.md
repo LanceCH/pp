@@ -2,6 +2,20 @@
 
 > A Vue.js project
 
+## Add Component
+
+``` bash
+npm run add -- <name> -t compoent
+
+```
+
+## Add View
+
+``` bash
+npm run add -- <name> -t view
+
+```
+
 ## Build Setup
 
 ``` bash

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="48px" height="48px" viewBox="0 0 48 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 44.1 (41455) - http://www.bohemiancoding.com/sketch -->
+    <title>icon add</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="朋友圈" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="朋友圈-选中后" transform="translate(-857.000000, -630.000000)" fill="#C0CCDA">
+            <g id="Group-7" transform="translate(561.000000, 334.000000)">
+                <path d="M318,318 L298.001389,318 C296.894938,318 296,318.895431 296,320 C296,321.11227 296.896052,322 298.001389,322 L318,322 L318,341.998611 C318,343.105062 318.895431,344 320,344 C321.11227,344 322,343.103948 322,341.998611 L322,322 L341.998611,322 C343.105062,322 344,321.104569 344,320 C344,318.88773 343.103948,318 341.998611,318 L322,318 L322,298.001389 C322,296.894938 321.104569,296 320,296 C318.88773,296 318,296.896052 318,298.001389 L318,318 Z" id="icon-add"></path>
+            </g>
+        </g>
+    </g>
+</svg>

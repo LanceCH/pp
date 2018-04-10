@@ -1,0 +1,23 @@
+{
+  "dev": {
+    "baseURL": "http://wx-fw.atido.com",
+    "proKey": "fw_wxms_test",
+    "wsUrl": "121.201.69.70",
+    "wsPort": 9503,
+    "wsIsHttps": false
+  },
+  "qa": {
+    "baseURL": "http://wx-fw.atido.com",
+    "proKey": "fw_wxms_test",
+    "wsUrl": "121.201.69.70",
+    "wsPort": 9503,
+    "wsIsHttps": false
+  },
+  "prod": {
+    "baseURL": "https://fw-wx.yidejia.com",
+    "proKey": "fw_wxms",
+    "wsUrl": "ws.yidejia.com",
+    "wsPort": null,
+    "wsIsHttps": true
+  }
+}
