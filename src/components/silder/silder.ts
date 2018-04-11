@@ -1,11 +1,10 @@
 import Vue from 'util/vueExt'
 import { Component } from 'vue-property-decorator'
-import { Getter } from 'vuex-class'
-import Template from './appHeader.vue'
+import Template from './silder.vue'
 
 @Component({
   mixins: [Template]
 })
-export default class AppHeader extends Vue {
+export default class Silder extends Vue {
 
 }

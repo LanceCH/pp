@@ -7,8 +7,6 @@ import router from 'router'
 import App from './App.vue'
 import svgicon = require('vue-svgicon')
 import * as Cookie from 'vue-cookie'
-import Auto from './plug'
-import UiAuto from './plug/auto'
 import VueAnalytics from 'vue-analytics'
 
 
@@ -17,10 +15,7 @@ import VueAnalytics from 'vue-analytics'
 Vue.use(svgicon, {
   tagName: 'svgicon'
 })
-Vue.component('Auto', UiAuto)
 Vue.use(ElementUI)
-Vue.use(Cookie)
-Vue.use(Auto)
 
 if (process.env.APP_ENV === 'prod') {
   Vue.use(VueAnalytics, {
