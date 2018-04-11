@@ -19,10 +19,10 @@ addRoute
   '/', 'Home',
   (r) => require.ensure([], () => r(require('views/home')['default']), 'Home')
   )
-  // (
-  // '*', 'defaultView',
-  // (r) => require.ensure([], () => r(require('views/login')['default']), 'Home')
-  // )
+  (
+  '*', 'defaultView',
+  (r) => require.ensure([], () => r(require('views/home')['default']), 'Home')
+  )
 
 const router = new Router({
   routes: routes
