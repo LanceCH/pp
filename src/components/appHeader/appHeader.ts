@@ -7,5 +7,9 @@ import Template from './appHeader.vue'
   mixins: [Template]
 })
 export default class AppHeader extends Vue {
+  activeIndex: number = 1
 
+  handleSelect(v) {
+    this.activeIndex = v
+  }
 }

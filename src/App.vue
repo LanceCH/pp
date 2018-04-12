@@ -1,11 +1,13 @@
 <template>
   <div id="app" class="container">
-    <app-header></app-header>
-    <div class="box">
-      <silder></silder>
-      <transition name="component-fade" mode="out-in">
-        <router-view></router-view>
-      </transition>
+    <div class="wrapper">
+      <app-header></app-header>
+      <div class="box">
+        <silder></silder>
+        <transition name="component-fade" mode="out-in">
+          <router-view></router-view>
+        </transition>
+      </div>
     </div>
   </div>
 </template>
@@ -55,6 +57,21 @@
 #app {
   min-height: 100%;
   height: 100%;
+  display: flex;
+
+.wrapper{
+  flex: 1;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.box{
+  position: relative;
+  display: flex;
+  flex: 1;
+}
+
 }
 .tankuang {
   position: fixed;
