@@ -1,6 +1,6 @@
 import Vue from 'util/vueExt'
 import { Component } from 'vue-property-decorator'
-import * as Template from './home.vue'
+import Template from './home.vue'
 
 @Component({
     mixins: [Template]

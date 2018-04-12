@@ -1,4 +1,9 @@
-header{
+header {
+  display: flex;
   height: 60px;
-  background: #ccc;
+  background: #72bcef;
+
+  img {
+    margin: 0 30px;
+  }
 }
