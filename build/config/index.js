@@ -1,7 +1,7 @@
 // see http://vuejs-templates.github.io/webpack for documentation.
 var path = require('path')
 var APP_ENV = process.env.APP_ENV || 'dev'
-var STATICDOMAIN = APP_ENV === 'prod' ? '//ss.yidejia.com/cloud_platform' : '';  // 静态资源访问域名（CDN）
+var STATICDOMAIN = APP_ENV === 'prod' ? '' : '';  // 静态资源访问域名（CDN）
 
 module.exports = {
   build: {

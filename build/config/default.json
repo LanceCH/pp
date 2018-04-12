@@ -1,22 +1,22 @@
 {
   "dev": {
-    "baseURL": "http://wx-fw.atido.com",
-    "proKey": "fw_wxms_test",
-    "wsUrl": "121.201.69.70",
-    "wsPort": 9503,
+    "baseURL": "",
+    "proKey": "",
+    "wsUrl": "",
+    "wsPort": 0,
     "wsIsHttps": false
   },
   "qa": {
-    "baseURL": "http://wx-fw.atido.com",
-    "proKey": "fw_wxms_test",
-    "wsUrl": "121.201.69.70",
-    "wsPort": 9503,
-    "wsIsHttps": false
+    "baseURL": "",
+    "proKey": "",
+    "wsUrl": "",
+    "wsPort": "",
+    "wsIsHttps":false
   },
   "prod": {
-    "baseURL": "https://fw-wx.yidejia.com",
-    "proKey": "fw_wxms",
-    "wsUrl": "ws.yidejia.com",
+    "baseURL": "",
+    "proKey": "",
+    "wsUrl": "",
     "wsPort": null,
     "wsIsHttps": true
   }
