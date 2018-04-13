@@ -7,9 +7,10 @@ import Template from './appHeader.vue'
   mixins: [Template]
 })
 export default class AppHeader extends Vue {
-  activeIndex: number = 1
+  activeIndex: string = '1'
 
   handleSelect(v) {
+    console.log(v)
     this.activeIndex = v
   }
 }

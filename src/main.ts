@@ -8,7 +8,7 @@ import App from './App.vue'
 import svgicon = require('vue-svgicon')
 import * as Cookie from 'vue-cookie'
 import VueAnalytics from 'vue-analytics'
-
+import * as VueDND from 'awe-dnd'
 
 // import all icons
 
@@ -16,7 +16,7 @@ Vue.use(svgicon, {
   tagName: 'svgicon'
 })
 Vue.use(ElementUI)
-
+Vue.use(VueDND)
 if (process.env.APP_ENV === 'prod') {
   Vue.use(VueAnalytics, {
     id: 'UA-105253274-2',

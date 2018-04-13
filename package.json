@@ -17,9 +17,11 @@
   "dependencies": {
     "@types/es6-shim": "^0.31.35",
     "@types/node": "^8.0.28",
+    "awe-dnd": "^0.3.1",
     "axios": "^0.16.2",
     "blueimp-md5": "^2.7.0",
     "bourbon": "^4.3.3",
+    "echarts": "^4.0.4",
     "element-ui": "^2.3.3",
     "eventemitter3": "^2.0.3",
     "js-cookie": "^2.1.4",

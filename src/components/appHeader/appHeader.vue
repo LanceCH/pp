@@ -1,6 +1,6 @@
 <template>
   <header>
-    <img width="120" :src="require('../../images/QQ20180411-214852@2x.png')">
+    <img width="120" :src="require('../../images/logo.png')">
     <el-menu background-color="#72bcef" text-color="#fff" active-text-color="#fff" :default-active="activeIndex" class="el-menu-demo" mode="horizontal" @select="handleSelect">
       <el-menu-item index="1">
         <a href="#/appManage">系统设置</a>

@@ -1,2 +1,49 @@
 @import "base";
 
+.container {
+  display: flex;
+  padding: 20px;
+  flex: 1;
+  flex-direction: column;
+
+  .soft-list {
+    display: flex;
+    padding: 20px;
+    background: #fff;
+    flex: 1;
+    flex-direction: column;
+
+    .header {
+      border-bottom: 1px solid #5faee3;
+
+      .header-p {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+    }
+
+    .list {
+      display: flex;
+      flex: 1;
+      overflow: auto;
+
+      .list-ul {
+        display: flex;
+        flex: 1;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        .list-li {
+          height: 177px;
+          padding: 20px;
+          cursor: pointer;
+
+          .title {
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+}
