@@ -37,24 +37,30 @@
         </el-form>
       </div>
       <div class="table-box">
-        <el-table :data="tableData6" border show-summary style="width: 100%">
+        <el-table :data="tableData6" border style="width: 100%">
           <el-table-column type="selection" width="55">
           </el-table-column>
-          <el-table-column prop="id" label="ID" width="180">
+          <el-table-column prop="id" label="序号" width="80">
           </el-table-column>
           <el-table-column prop="name" label="名称">
           </el-table-column>
-          <el-table-column prop="amount1" sortable label="入职部门">
+          <el-table-column prop="depart" width="150" sortable label="入职部门">
           </el-table-column>
-          <el-table-column prop="amount2" sortable label="岗位">
+          <el-table-column prop="gangwei" sortable label="岗位">
           </el-table-column>
-          <el-table-column prop="amount3" sortable label="入职时间">
+          <el-table-column prop="ruzhiTime" width="150" sortable label="入职时间">
           </el-table-column>
-          <el-table-column prop="amount4" sortable label="创建时间">
+          <el-table-column prop="createTime" width="150" sortable label="创建时间">
           </el-table-column>
-          <el-table-column prop="amount5" sortable label="修改时间">
+          <el-table-column prop="editTime" width="150" sortable label="修改时间">
           </el-table-column>
-          <el-table-column prop="amount6" sortable label="流程状态">
+          <el-table-column prop="control" width="150" sortable label="流程状态">
+          </el-table-column>
+          <el-table-column fixed="right" width="150" label="操作">
+            <template slot-scope="scope">
+              <el-button size="mini">查看</el-button>
+              <el-button size="mini" type="danger" @click="handleDelete">删除</el-button>
+            </template>
           </el-table-column>
         </el-table>
       </div>
