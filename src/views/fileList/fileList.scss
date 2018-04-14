@@ -1,0 +1,26 @@
+@import "base";
+
+.container {
+  padding: 20px;
+  flex: 1;
+  flex-direction: column;
+  overflow: auto;
+
+  .table {
+    .header {
+      height: 60px;
+      margin: 20px 0 0px;
+      background: #72bcef;
+      color: #55a3e3;
+      background-color: #bee2f4;
+      line-height: 60px;
+      text-indent: 40px;
+      font-size: 22px;
+    }
+
+    .filter {
+      padding: 10px;
+      background: #fff;
+    }
+  }
+}

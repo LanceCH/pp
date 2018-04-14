@@ -7,4 +7,8 @@ import Template from './silder.vue'
 })
 export default class Silder extends Vue {
 
+
+  selectMenu(index, indexPath) {
+    window.location.href = '#' + indexPath
+  }
 }
