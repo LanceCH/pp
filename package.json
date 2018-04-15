@@ -35,6 +35,8 @@
     "vue-analytics": "^4.4.0",
     "vue-at": "2.x",
     "vue-cookie": "^1.1.4",
+    "vue-grid-layout": "^2.1.12",
+    "vue-js-grid": "^1.0.1",
     "vue-property-decorator": "^5.0.1",
     "vue-router": "^2.3.0",
     "vue-svgicon": "^1.1.4",

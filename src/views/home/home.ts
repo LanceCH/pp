@@ -2,8 +2,16 @@ import Vue from 'util/vueExt'
 import { Component } from 'vue-property-decorator'
 import Template from './home.vue'
 const echarts = require('echarts')
+import * as VueGridLayout from 'vue-grid-layout'
+Vue.use(VueGridLayout)
+var GridLayout = VueGridLayout.GridLayout
+var GridItem = VueGridLayout.GridItem
 @Component({
-  mixins: [Template]
+  mixins: [Template],
+  components: {
+    GridLayout,
+    GridItem,
+}
 })
 export default class Home extends Vue {
   apps = [

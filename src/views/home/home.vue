@@ -8,11 +8,20 @@
         </p>
       </div>
       <div class="list">
-        <ul class="list-ul">
-          <li v-for="(app,i) of apps" :key="i" v-dragging="{ item: app, list: apps, group: 'app' }" class="list-li"><img :src="require('../../images/soft.png')" />
-            <div class="title">{{app.text}}</div>
-          </li>
-        </ul>
+        <grid
+        :draggable="true"
+        :sortable="true"
+        :items="apps"
+        :cellWidth="140"
+        :cellHeight="140"
+        class="list-ul">
+        <template slot="cell" scope="props">
+          <div class="app">
+            <div class="img-box"></div>
+            <div class="title">{{props.item.text}}</div>
+          </div>
+        </template>
+        </grid>
       </div>
     </div>
     <div class="charts">

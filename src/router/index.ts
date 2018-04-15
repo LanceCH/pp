@@ -24,6 +24,10 @@ addRoute
     (r) => require.ensure([], () => r(require('views/fileList')['default']), 'fileList')
   )
   (
+    '/reportList', 'reportList',
+    (r) => require.ensure([], () => r(require('views/reportList')['default']), 'reportList')
+  )
+  (
   '*', 'defaultView',
   (r) => require.ensure([], () => r(require('views/home')['default']), 'Home')
   )

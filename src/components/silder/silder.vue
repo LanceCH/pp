@@ -9,7 +9,7 @@
         <i class="el-icon-tickets"></i>
         <span slot="title">档案列表</span>
       </el-menu-item>
-      <el-menu-item index="3">
+      <el-menu-item index="/reportList">
         <i class="el-icon-document"></i>
         <span slot="title">报表设计</span>
       </el-menu-item>
