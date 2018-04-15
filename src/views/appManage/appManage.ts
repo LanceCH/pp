@@ -1,10 +1,10 @@
 import Vue from 'util/vueExt'
 import { Component } from 'vue-property-decorator'
-import Template from './reportList.vue'
+import Template from './appManage.vue'
 @Component({
     mixins: [Template]
 })
-export default class ReportList extends Vue {
+export default class AppManage extends Vue {
 
     items = [
        {text:'流程中心',imgUrl:'images/1.png'},

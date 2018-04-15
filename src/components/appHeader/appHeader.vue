@@ -3,12 +3,12 @@
     <img width="120" :src="require('../../images/logo.png')">
     <el-menu background-color="#72bcef" text-color="#fff" active-text-color="#fff" :default-active="activeIndex" class="el-menu-demo" mode="horizontal" @select="handleSelect">
       <el-menu-item index="1">
-        <a href="#/appManage">系统设置</a>
+       系统设置
       </el-menu-item>
-      <!-- <el-menu-item index="2">
-        <a href="#/organizational">组织架构</a>
+      <el-menu-item index="2">
+       组织架构
       </el-menu-item>
-      <el-menu-item index="3">
+     <!--  <el-menu-item index="3">
         <a href="#/权限">权限管理</a>
       </el-menu-item>
       <el-menu-item index="4">

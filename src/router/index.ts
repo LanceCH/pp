@@ -24,12 +24,12 @@ addRoute
     (r) => require.ensure([], () => r(require('views/fileList')['default']), 'fileList')
   )
   (
-    '/reportList', 'reportList',
-    (r) => require.ensure([], () => r(require('views/reportList')['default']), 'reportList')
+    '/appManage', 'appManage',
+    (r) => require.ensure([], () => r(require('views/appManage')['default']), 'appManage')
   )
   (
-  '*', 'defaultView',
-  (r) => require.ensure([], () => r(require('views/home')['default']), 'Home')
+  '/organization', 'organization',
+  (r) => require.ensure([], () => r(require('views/organization')['default']), 'organization')
   )
 
 const router = new Router({
