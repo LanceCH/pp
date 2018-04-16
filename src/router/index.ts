@@ -31,7 +31,10 @@ addRoute
   '/organization', 'organization',
   (r) => require.ensure([], () => r(require('views/organization')['default']), 'organization')
   )
-
+  (
+    '/jurisdiction', 'jurisdiction',
+    (r) => require.ensure([], () => r(require('views/jurisdiction')['default']), 'jurisdiction')
+  )
 const router = new Router({
   routes: routes
 })

@@ -8,10 +8,10 @@
       <el-menu-item index="2">
        组织架构
       </el-menu-item>
-     <!--  <el-menu-item index="3">
-        <a href="#/权限">权限管理</a>
+      <el-menu-item index="3">
+        权限管理
       </el-menu-item>
-      <el-menu-item index="4">
+      <!--  <el-menu-item index="4">
         <a href="#/system">系统集成</a>
       </el-menu-item>
       <el-menu-item index="5">

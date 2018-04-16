@@ -13,8 +13,10 @@ export default class AppHeader extends Vue {
     this.activeIndex = v
     if (Number(v) === 1) {
       window.location.href = '#/appManage'
-    } else if(Number(v) === 2) {
+    } else if (Number(v) === 2) {
       window.location.href = '#/organization'
+    } else if (Number(v) === 3) {
+      window.location.href = '#/jurisdiction'
     }
   }
 }

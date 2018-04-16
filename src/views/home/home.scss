@@ -16,6 +16,7 @@
     overflow: auto;
 
     .header {
+      padding: 0 10px;
       border-bottom: 1px solid #5faee3;
 
       .header-p {
@@ -29,21 +30,25 @@
       display: flex;
       flex: 1;
       overflow: auto;
-      .app{
-        cursor: pointer;
+
+      .app {
         display: flex;
+        cursor: pointer;
         flex-direction: column;
         align-items: center;
-        .img-box{
-          background-image: url('../../images/soft.png');
-          background-repeat: no-repeat;
-          height: 120px;
+
+        .img-box {
           width: 120px;
+          height: 120px;
+          background-image: url("../../images/soft.png");
+          background-repeat: no-repeat;
         }
-        .title{
+
+        .title {
           text-align: center;
         }
       }
+
       .v-grid-item-wrapper {
         margin: 10px;
       }

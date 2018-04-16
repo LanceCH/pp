@@ -9,14 +9,14 @@ export default class Silder extends Vue {
 
 
   selectMenu(index, indexPath) {
-    window.location.href = '#' + indexPath
+    window.location.href = '#' + index
   }
   key = ''
   @Watch('$route.path')
   changeRoute(v) {
-    if(v === 'Home') {
+    if (v === 'Home') {
       this.key = '/'
-    } else if(v === 'fileList'){
+    } else if (v === 'fileList'){
       this.key = v
     } else {
       this.key = v
@@ -27,7 +27,7 @@ export default class Silder extends Vue {
     const {fullPath} = this.$route
     if (fullPath.includes('fileList')) {
       this.key = fullPath
-    } else if(fullPath.includes('appManage')) {
+    } else if (fullPath.includes('appManage')) {
       this.key = fullPath
     } else {
       this.key = '/'
