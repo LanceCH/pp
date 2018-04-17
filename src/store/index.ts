@@ -1,39 +1,27 @@
-import Vue from 'vue'
+import Vue, {PluginObject} from 'vue'
 import Vuex from 'vuex'
 import * as types from './types'
 import * as api from '../util/api'
-import plugins from './plugins'
-import {PlainObject} from 'types/interface'
+
+import state from './state'
+import getters from './getters'
+import actions from './actions'
+import headerModule from './modules/header'
 
 Vue.use(Vuex)
 
-const initState: PlainObject = {
-  test: 0
-}
-
+const plugins = [
+    store => {}
+]
 const store = new Vuex.Store({
-  state: {
-    ...initState
+  strict: process.env.NODE_ENV === 'development',
+  state,
+  getters,
+  actions,
+  modules: {
+    header: headerModule
   },
-
-  getters: {
-    getTest (state) {
-      return state.test
-    }
-  },
-
-  mutations: {
-    [types.TEST] (state, num) {
-      state.test = num
-    }
-  },
-
-  actions: {
-    GET_TEST ({ commit }, param) {
-        commit(types.TEST, param.num)
-      }
-    },
-  plugins: [plugins]
+  plugins
 })
 
 export default store

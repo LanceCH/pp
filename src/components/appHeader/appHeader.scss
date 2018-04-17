@@ -2,8 +2,49 @@ header {
   display: flex;
   height: 60px;
   background: #72bcef;
+  justify-content: space-between;
+  align-items: center;
 
-  img {
-    margin: 0 30px;
+  .logo {
+    margin: 0 10px;
   }
+
+  .right-part {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .search {
+      width: 200px;
+    }
+
+    .bell {
+      margin: 0 0 0px 30px;
+    }
+
+    .avatar {
+      width: 30px;
+      height: 30px;
+      margin: 0 10px;
+      border-radius: 30px;
+      overflow: hidden;
+    }
+  }
+}
+
+.el-dropdown-link {
+  display: flex;
+  color: #fff;
+  cursor: pointer;
+  align-items: center;
+}
+
+.el-icon-arrow-down {
+  font-size: 12px;
+}
+
+.el-dropdown {
+  display: flex;
+  padding: 0 30px 0 10px;
+  align-items: center;
 }
