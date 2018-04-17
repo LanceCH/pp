@@ -7,19 +7,18 @@ import Template from './application.vue'
 })
 export default class Application extends Vue {
   items = [
-    { text: '流程中心', imgUrl: 'images/1.png' },
-    { text: '人员设定', imgUrl: 'images/2.png' },
-    { text: '人事管理', imgUrl: 'images/3.png' },
-    { text: '我的自定', imgUrl: 'images/4.png' },
-    { text: '新建应用', imgUrl: 'images/5.png' }
+    { text: '流程中心', imgUrl: 'images/1.png' , id: 1},
+    { text: '人员设定', imgUrl: 'images/2.png' , id: 2},
+    { text: '人事管理', imgUrl: 'images/3.png' , id: 3},
+    { text: '我的自定', imgUrl: 'images/4.png' , id: 4},
+    { text: '新建应用', imgUrl: 'images/5.png', id: 0}
   ]
-
   dialogVisible: boolean = false
   formLabelAlign = {
     name: ''
   }
-
-  handleClose() {}
+  title: string = ''
+  fileList = []
 
   handleRemove(file, fileList) {
     console.log(file, fileList)
@@ -27,8 +26,30 @@ export default class Application extends Vue {
   handlePreview(file) {
     console.log(file)
   }
-  fileList2 = []
+  handleClose() {
+    this.dialogVisible = false
+  }
+  /**
+   * 保存
+   */
+  submit() {
+    this.dialogVisible = false
+  }
+  /**
+   * 打开应用 / 新增
+   */
+  handleApp(id) {
+    if (!!id) {
 
+    } else {
+      // 新增
+      this.title = '新增'
+      this.dialogVisible = true
+    }
+  }
+  /**
+   * 删除应用
+   */
   deleteHandle({ index }) {
     this.$confirm('确认删除?', '提示', {
       confirmButtonText: '确定',
