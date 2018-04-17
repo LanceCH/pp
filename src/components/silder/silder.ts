@@ -1,13 +1,11 @@
 import Vue from 'util/vueExt'
-import { Component, Watch} from 'vue-property-decorator'
+import { Component, Watch } from 'vue-property-decorator'
 import Template from './silder.vue'
 
 @Component({
   mixins: [Template]
 })
 export default class Silder extends Vue {
-
-
   selectMenu(index, indexPath) {
     window.location.href = '#' + index
   }
@@ -16,7 +14,7 @@ export default class Silder extends Vue {
   changeRoute(v) {
     if (v === 'Home') {
       this.key = '/'
-    } else if (v === 'fileList'){
+    } else if (v === 'fileList') {
       this.key = v
     } else {
       this.key = v
@@ -24,10 +22,10 @@ export default class Silder extends Vue {
   }
 
   mounted() {
-    const {fullPath} = this.$route
+    const { fullPath } = this.$route
     if (fullPath.includes('fileList')) {
       this.key = fullPath
-    } else if (fullPath.includes('appManage')) {
+    } else if (fullPath.includes('application')) {
       this.key = fullPath
     } else {
       this.key = '/'

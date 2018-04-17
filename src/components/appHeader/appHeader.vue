@@ -32,7 +32,7 @@
           小可爱<i class="el-icon-arrow-down el-icon--right"></i>
         </span>
         <el-dropdown-menu slot="dropdown">
-          <el-dropdown-item command="systemConfig">系统设置</el-dropdown-item>
+          <el-dropdown-item command="application">应用管理</el-dropdown-item>
           <el-dropdown-item command="baseMsg">基本资料</el-dropdown-item>
           <el-dropdown-item command="logout">登出</el-dropdown-item>
         </el-dropdown-menu>

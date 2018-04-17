@@ -3,7 +3,7 @@
     <div class="wrapper">
       <app-header></app-header>
       <div class="box">
-        <silder></silder>
+        <silder v-if="showHomeList"></silder>
         <transition name="component-fade" mode="out-in">
           <router-view></router-view>
         </transition>
@@ -94,11 +94,24 @@
 <script lang="ts">
 import AppHeader from 'components/appHeader'
 import Silder from 'components/silder'
+import {HeaderGetter, HeaderAction} from 'store/bindHelpers'
 
 export default {
   components: {
     AppHeader,
     Silder
-  }
+  },
+      data() {
+        return {
+            showHomeList: true
+        }
+    },
+      watch: {
+        $route(to) {
+            this.showHomeList = !(
+                to.name === 'application'
+            )
+        }
+    }
 }
 </script>

@@ -57,4 +57,4 @@
             </el-dialog>
     </div>
 </template>
-<style src="./appManage.scss" lang="scss" scoped></style>
+<style src="./application.scss" lang="scss" scoped></style>

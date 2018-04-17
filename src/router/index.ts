@@ -24,11 +24,11 @@ addRoute
     (r) => require.ensure([], () => r(require('views/fileList')['default']), 'fileList')
   )
   (
-    '/appManage', 'appManage',
-    (r) => require.ensure([], () => r(require('views/appManage')['default']), 'appManage')
+    '/application', 'application',
+    (r) => require.ensure([], () => r(require('views/application')['default']), 'application')
   )
   (
-  '/organization', 'organization',
+    '/organization', 'organization',
   (r) => require.ensure([], () => r(require('views/organization')['default']), 'organization')
   )
   (
