@@ -1,17 +1,21 @@
 import Vue from 'util/vueExt'
 import { Component } from 'vue-property-decorator'
 import Template from './application.vue'
+import { AppDetailAction } from 'store/bindHelpers'
 
 @Component({
   mixins: [Template]
 })
 export default class Application extends Vue {
+  @AppDetailAction('selectAppDetail')
+  selectAppDetail: (args: { title: string; id: number }) => void
+
   items = [
-    { text: '流程中心', imgUrl: 'images/1.png' , id: 1},
-    { text: '人员设定', imgUrl: 'images/2.png' , id: 2},
-    { text: '人事管理', imgUrl: 'images/3.png' , id: 3},
-    { text: '我的自定', imgUrl: 'images/4.png' , id: 4},
-    { text: '新建应用', imgUrl: 'images/5.png', id: 0}
+    { text: '流程中心', imgUrl: 'images/1.png', id: 1 },
+    { text: '人员设定', imgUrl: 'images/2.png', id: 2 },
+    { text: '人事管理', imgUrl: 'images/3.png', id: 3 },
+    { text: '我的自定', imgUrl: 'images/4.png', id: 4 },
+    { text: '新建应用', imgUrl: 'images/5.png', id: 0 }
   ]
   dialogVisible: boolean = false
   formLabelAlign = {
@@ -38,9 +42,10 @@ export default class Application extends Vue {
   /**
    * 打开应用 / 新增
    */
-  handleApp(id) {
+  handleApp(title, id) {
     if (!!id) {
-
+      this.selectAppDetail({ title, id })
+      window.location.href = '#/applicationContent'
     } else {
       // 新增
       this.title = '新增'

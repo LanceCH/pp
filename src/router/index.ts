@@ -35,6 +35,10 @@ addRoute
     '/jurisdiction', 'jurisdiction',
     (r) => require.ensure([], () => r(require('views/jurisdiction')['default']), 'jurisdiction')
   )
+  (
+    '/applicationContent', 'applicationContent',
+    (r) => require.ensure([], () => r(require('views/applicationContent')['default']), 'applicationContent')
+  )
 const router = new Router({
   routes: routes
 })

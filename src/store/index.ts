@@ -7,6 +7,7 @@ import state from './state'
 import getters from './getters'
 import actions from './actions'
 import headerModule from './modules/header'
+import appDetailModule from './modules/application'
 
 Vue.use(Vuex)
 
@@ -19,7 +20,8 @@ const store = new Vuex.Store({
   getters,
   actions,
   modules: {
-    header: headerModule
+    header: headerModule,
+    appDetail: appDetailModule
   },
   plugins
 })

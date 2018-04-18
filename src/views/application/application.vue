@@ -14,7 +14,7 @@
             <div class="delete" @click="deleteHandle(props)" :style="`background-image:url(${require('images/cz1.png')})`"></div>
             <div v-popover:popover2 class="setting" :style="`background-image:url(${require('images/cz2.png')})`"></div>
           </div>
-          <div class="img-box" @click="handleApp(props.item.id)" :style="`background-image:url(${require('images/1.png')})`"></div>
+          <div class="img-box" @click="handleApp(props.item.text,props.item.id)" :style="`background-image:url(${require('images/1.png')})`"></div>
           <div class="title">{{props.item.text}}</div>
         </div>
       </template>
