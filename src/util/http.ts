@@ -14,11 +14,12 @@ enum HTTPERROR {
 let showAuthError = false
 
 const DEFAULTCONFIG = {
-  baseURL: process.env.ENV_CONFIG.baseURL
+  baseURL: 'http://rapapi.org/mockjsdata/'
 }
-
-const isSuccess = res => res.code !== undefined && res.code !== null && Number(res.code) === 1
-const resFormat = res => res.response || res.data || {}
+// const isSuccess = res => res.code !== undefined && res.code !== null && Number(res.code) === 1
+const isSuccess = res => true
+// const resFormat = res => res.response || res.data || {}
+const resFormat = res => res
 
 const http: HttpResquest = {}
 const methods = ['get', 'post', 'put', 'delete']
@@ -46,7 +47,6 @@ methods.forEach(v => {
         ...cfg.params,
         ...queryData
       }
-      // if (cfg.url.indexOf('http://rap') !== 0) cfg.url += typeof window === 'undefined' ? `&token=${ctx.req.session.staffInfo.token}` : `&token=${cookie().getItem('token')}`;
       return cfg
     }, (error) => Promise.reject(error))
     // Add a response interceptor
@@ -54,6 +54,7 @@ methods.forEach(v => {
       if (!showAuthError && (response.data.code === 402)) {
         showAuthError = true
         Notification({
+          title: '',
           message: '登录已经过期',
           type: 'error'
         })
@@ -67,6 +68,7 @@ methods.forEach(v => {
       }
       if (response.data.code === 401) {
         Notification({
+          title: '',
           message: '你没有权限访问',
           type: 'error'
         })

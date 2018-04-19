@@ -1,5 +1,5 @@
 import http from './http'
 
-export function login(data) {
-  return http.get('url', data)
+export function getTree(data) {
+  return http.get('33460/getTree', data)
 }
