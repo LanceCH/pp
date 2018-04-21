@@ -11,6 +11,8 @@ import * as Cookie from 'vue-cookie'
 import VueAnalytics from 'vue-analytics'
 import * as VueDND from 'awe-dnd'
 // import all icons
+import 'components/icons'
+
 import Grid  from 'vue-js-grid'
 Vue.use(Grid)
 Vue.use(svgicon, {

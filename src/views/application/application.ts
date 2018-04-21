@@ -2,9 +2,12 @@ import Vue from 'util/vueExt'
 import { Component } from 'vue-property-decorator'
 import Template from './application.vue'
 import { AppDetailAction } from 'store/bindHelpers'
-
+import IconBox from 'components/iconBox'
 @Component({
-  mixins: [Template]
+  mixins: [Template],
+  components: {
+    IconBox
+  }
 })
 export default class Application extends Vue {
   @AppDetailAction('selectAppDetail')
@@ -23,6 +26,8 @@ export default class Application extends Vue {
   }
   title: string = ''
   fileList = []
+  iconList: string[] = ['all', 'calendar', 'cart', 'email', 'gifts', 'set']
+  selectIcon: string = 'all' // 选中的icon，默认all
 
   handleRemove(file, fileList) {
     console.log(file, fileList)
@@ -32,6 +37,13 @@ export default class Application extends Vue {
   }
   handleClose() {
     this.dialogVisible = false
+  }
+  handleClick() {}
+  /**
+   * 获取选择的icon名
+   */
+  selectIconFun(v) {
+    this.selectIcon = v
   }
   /**
    * 保存

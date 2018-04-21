@@ -9,7 +9,7 @@
     "dev": "node build/dev-server.js",
     "qa": "cross-env APP_ENV=qa npm run build",
     "prod": "cross-env APP_ENV=prod npm run build",
-    "deployProd": "npm run prod && qn sync ydj-statics -s dist/prod -p cloud_platform/dist/prod && ./build/deployProd.sh",
+    "deployProd": "npm run prod && ./build/deployProd.sh",
     "build": "node build/build.js",
     "lint": "tslint -c ./tslint.json ./src/**/*.ts",
     "svg": "vsvg -s ./src/assets/svg -t ./src/components/icons"

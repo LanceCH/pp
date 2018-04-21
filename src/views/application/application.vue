@@ -26,9 +26,12 @@
           <el-input v-model="formLabelAlign.name"></el-input>
         </el-form-item>
       </el-form>
-      <el-upload class="upload-demo" action="https://jsonplaceholder.typicode.com/posts/" :on-preview="handlePreview" :on-remove="handleRemove" :file-list="fileList" :auto-upload="false" list-type="picture">
-        <el-button size="small" type="primary">点击上传</el-button>
-      </el-upload>
+      <el-dropdown split-button type="primary" trigger="click" @click="handleClick">
+        <svgicon :icon="selectIcon" width="48" height="48"/>
+        <el-dropdown-menu slot="dropdown">
+          <icon-box :iconList="iconList" :selectIcon="selectIconFun"></icon-box>
+        </el-dropdown-menu>
+      </el-dropdown>
       <span slot="footer" class="dialog-footer">
         <el-button @click="dialogVisible = false">取 消</el-button>
         <el-button type="primary" @click="submit">确 定</el-button>

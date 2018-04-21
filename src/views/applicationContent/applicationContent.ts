@@ -17,9 +17,13 @@ export default class ApplicationContent extends Vue {
     label: 'label'
   }
 
+  dragLevel: number = null // 拖动对象等级
+  dragParent = null
+
   handleDragStart(node, ev) {
     //  console.log('drag start', node)
-    //  console.log(node.isLeaf)
+    this.dragLevel = node.level
+    console.log(node)
   }
   handleDragEnter(draggingNode, dropNode, ev) {
     // console.log('tree drag enter: ', dropNode.label)
@@ -35,17 +39,19 @@ export default class ApplicationContent extends Vue {
   }
   handleDrop(draggingNode, dropNode, dropType, ev) {
     // console.log('tree drop: ', dropNode.label, dropType)
+    console.log(dropNode.level)
   }
   allowDrop(draggingNode, dropNode) {
     console.log(dropNode)
-    return (
-      dropNode.isLeaf === draggingNode.isLeaf &&
-      dropNode.level === draggingNode.level &&
-      dropNode.level! === 1
-    )
-  }
-  allowDrag(draggingNode) {
-    return draggingNode.data.label.indexOf('三级 3-1-1') === -1
+   // console.log(dropNode.level, dropNode.level)
+   console.log(dropNode.level, dropNode.level)
+   if (this.dragLevel === 1) {
+    // 一级
+      return dropNode.level !== 2
+   } else {
+    // 二级
+      return dropNode.level !== 1
+   }
   }
 
   mounted() {

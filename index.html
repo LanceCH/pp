@@ -1,4 +1,16 @@
-<!DOCTYPE html><html><head><meta charset=utf-8><title>sun</title><meta name=description content=vue><meta name=mobile-web-app-capable content=yes><meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,minimal-ui"><link rel="shortcut icon" type=image/x-icon href=/favicon.ico><meta name=theme-color content=#f60><script type=text/javascript>function setRootSize() {
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset=utf-8>
+  <title>sun</title>
+  <meta name=description content=vue>
+  <meta name=mobile-web-app-capable content=yes>
+  <meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,minimal-ui">
+  <link rel="shortcut icon" type=image/x-icon href=/favicon.ico>
+  <meta name=theme-color content=#f60>
+  <script type=text/javascript>
+    function setRootSize() {
       var docWid = window.document.documentElement,
         width = docWid.getBoundingClientRect().width,
         fontSize = (width >= 750) ? 40 : width / 750 * 40;
@@ -7,4 +19,18 @@
     window.addEventListener('resize', function () {
       setRootSize();
     }, false);
-    setRootSize();</script><script async src=https://www.google-analytics.com/analytics.js></script><link href=/dist/dev/static/css/app.007ef6c29c37587eb09f648c3a11d8ce.css rel=stylesheet></head><body><div id=app></div><script type=text/javascript src=/dist/dev/static/js/manifest.b3d277370b6f6d2157a2.js></script><script type=text/javascript src=/dist/dev/static/js/vendor.307d57a5541936a81322.js></script><script type=text/javascript src=/dist/dev/static/js/app.078fca70b50d5e920794.js></script></body></html>
+    setRootSize();
+
+  </script>
+  <script async src=https://www.google-analytics.com/analytics.js></script>
+  <link href=/dist/prod/static/css/app.c97e052baf3123d3958037a5f42fd91f.css rel=stylesheet>
+</head>
+
+<body>
+  <div id=app></div>
+  <script type=text/javascript src=/dist/prod/static/js/manifest.237ee4046cbd891f7b28.js></script>
+  <script type=text/javascript src=/dist/prod/static/js/vendor.3d80a3375e7452c85b4a.js></script>
+  <script type=text/javascript src=/dist/prod/static/js/app.bfebb5185477fe9691d3.js></script>
+</body>
+
+</html>
