@@ -15,10 +15,10 @@
             <i class="el-icon-tickets" :class="{'is-active': key === 2}"></i>
             <span slot="title">档案列表</span>
           </el-menu-item>
-          <el-menu-item index="/reportList">
+          <!-- <el-menu-item index="/reportList">
             <i class="el-icon-document" :class="{'is-active': key === 3}"></i>
             <span slot="title">报表设计</span>
-          </el-menu-item>
+          </el-menu-item> -->
         </el-submenu>
       </el-submenu>
     </el-menu>

@@ -26,7 +26,9 @@ export default class FileList extends Vue {
       control: '处理中'
     }
   ]
-
+  /**
+   * 删除
+  */
   handleDelete() {
     this.$confirm('确认删除?', '提示', {
       confirmButtonText: '确定',
@@ -42,4 +44,12 @@ export default class FileList extends Vue {
       })
       .catch(() => {})
   }
+  /**
+   * 查看
+  */
+  handleRead() {}
+  /**
+   * 编辑
+  */
+  handleEdit() {}
 }
