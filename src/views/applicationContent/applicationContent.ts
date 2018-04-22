@@ -8,7 +8,7 @@ import { AppDetailGetter } from 'store/bindHelpers'
   mixins: [Template]
 })
 export default class ApplicationContent extends Vue {
-  @AppDetailGetter('getAppDetail') getAppDetail: { title: string; id: number }
+  appDetail = {title: '', id: 0}
 
   navData = []
 
@@ -19,6 +19,12 @@ export default class ApplicationContent extends Vue {
 
   dragLevel: number = null // 拖动对象等级
   dragParent = null
+  fileTitle: string = '' // 二级标题
+
+  mounted() {
+    this.getTree()
+    this.appDetail = JSON.parse(sessionStorage.getItem('app'))
+  }
 
   handleDragStart(node, ev) {
     //  console.log('drag start', node)
@@ -53,9 +59,14 @@ export default class ApplicationContent extends Vue {
       return dropNode.level !== 1
    }
   }
-
-  mounted() {
-    this.getTree()
+  /**
+   * 选中树
+   */
+  handleNodeClick(data) {
+    console.log(data)
+    if(!data.children) {
+      this.fileTitle = data.label
+    }
   }
 
   /**

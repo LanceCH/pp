@@ -1,5 +1,5 @@
 import Vue from 'util/vueExt'
-import { Component } from 'vue-property-decorator'
+import { Component, Watch} from 'vue-property-decorator'
 import { Getter } from 'vuex-class'
 import Template from './appHeader.vue'
 
@@ -8,10 +8,26 @@ import {HeaderGetter, HeaderAction} from 'store/bindHelpers'
   mixins: [Template]
 })
 export default class AppHeader extends Vue {
-  @HeaderGetter('getHeaderNavVisible') navVisible: boolean
-  @HeaderAction('selectBatchAutoPullGroup') selectBatchAutoPullGroup: (boo) => void
   activeIndex: string = '1'
   keyword: string = ''
+  navVisible: boolean = false
+  
+  mounted() {
+    if(this.$route.path === '/' || this.$route.path.includes('fileList') ||  this.$route.path.includes('reportList')){
+      this.navVisible = false
+    } else {
+      this.navVisible = true
+    }
+  }
+
+  @Watch('$route.path')
+  routeChange(r) {
+  if(r === '/' || r.includes('fileList') || r.includes('reportList')){
+    this.navVisible = false
+  } else {
+    this.navVisible = true
+  }
+}
   handleSelect(v) {
     this.activeIndex = v
     if (Number(v) === 1) {
@@ -24,10 +40,18 @@ export default class AppHeader extends Vue {
   }
 
   /**
+   * 回首页
+  */
+  toHome() {
+    this.navVisible = false
+    window.location.href = '#/'
+  }
+
+  /**
    * 下拉
    */
   handleCommand(v) {
-    this.selectBatchAutoPullGroup(true)
+    this.navVisible = true
     window.location.href = '#/' + v
   }
 }

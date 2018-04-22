@@ -1,7 +1,7 @@
 <template>
     <div class="icon-box">
-        <ul>
-          <li v-for="(v, i) in iconList" :key="i" @click="select(v)">
+        <ul class="ul">
+          <li class="li" v-for="(v, i) in iconList" :key="i" @click="select(v)">
             <svgicon :icon="v" width="48" height="48"/>
           </li>
         </ul>

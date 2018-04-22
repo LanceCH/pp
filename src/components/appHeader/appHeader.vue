@@ -1,7 +1,7 @@
 <template>
   <header>
-    <img class="logo" width="120" :src="require('../../images/logo.png')">
-    <el-menu v-if="navVisible" background-color="#72bcef" text-color="#fff" active-text-color="#fff" :default-active="activeIndex" class="el-menu-demo" mode="horizontal" @select="handleSelect">
+    <img class="logo" width="120" :src="require('../../images/logo.png')" @click="toHome">
+    <el-menu v-show="navVisible" background-color="#72bcef" text-color="#fff" active-text-color="#fff" :default-active="activeIndex" class="el-menu-demo" mode="horizontal" @select="handleSelect">
       <el-menu-item index="1">
         系统设置
       </el-menu-item>

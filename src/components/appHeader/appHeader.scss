@@ -7,6 +7,12 @@ header {
 
   .logo {
     margin: 0 10px;
+    cursor: pointer;
+  }
+
+  .el-menu-demo{
+    flex: 1;
+    margin: 0 50px;
   }
 
   .right-part {
@@ -19,7 +25,7 @@ header {
     }
 
     .bell {
-      margin: 0 0 0px 30px;
+      margin: 0 0 0 30px;
     }
 
     .avatar {

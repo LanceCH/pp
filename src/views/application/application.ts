@@ -10,8 +10,6 @@ import IconBox from 'components/iconBox'
   }
 })
 export default class Application extends Vue {
-  @AppDetailAction('selectAppDetail')
-  selectAppDetail: (args: { title: string; id: number }) => void
 
   items = [
     { text: '流程中心', imgUrl: 'images/1.png', id: 1 },
@@ -50,13 +48,17 @@ export default class Application extends Vue {
    */
   submit() {
     this.dialogVisible = false
+    console.log({
+      title: this.formLabelAlign.name,
+      iconName: this.selectIcon,
+    })
   }
   /**
    * 打开应用 / 新增
    */
   handleApp(title, id) {
     if (!!id) {
-      this.selectAppDetail({ title, id })
+      sessionStorage.setItem('app',JSON.stringify({id,title}))
       window.location.href = '#/applicationContent'
     } else {
       // 新增

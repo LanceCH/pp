@@ -2,6 +2,7 @@
 
 .applicationContent {
   display: flex;
+  flex: 1;
 
   .left-nav {
     width: 200px;
@@ -9,8 +10,14 @@
     overflow: auto;
   }
 
-  .right-content {
+  /deep/ .right-content {
     flex: 1;
+    padding: 20px;
+    display:flex;
+    flex-direction: column;
+    *{
+      color: #72BCEF;
+    }
   }
 }
 
@@ -29,5 +36,45 @@
 
   .el-tree-node:focus > .el-tree-node__content {
     background-color: #4f9ce8;
+  }
+}
+
+.add-flie-container{
+  display: flex;
+  flex: 1;
+
+  .add-box{
+    border-radius: 5px;
+    &:hover{
+      border: 1px solid #72BCEF;
+      box-shadow: 0px 0px 10px #72BCEF;
+    }
+
+    flex: 1;
+    background: #fff;
+    display: flex;
+    height: 214px;
+    margin: 30px;
+    align-items: center;
+    padding: 20px;
+    cursor: pointer;
+    .title-box{
+      margin-left: 40px;
+      height: 174px;
+      p{
+        font-size: 26px;
+        margin-bottom: 40px;
+        font-weight: 800;
+      }
+      span{}
+    }
+  }
+
+  .no-select{
+    flex: 1;
+    color: #888;
+    font-size: 26px;
+    text-align: center;
+    margin-top: 100px;
   }
 }

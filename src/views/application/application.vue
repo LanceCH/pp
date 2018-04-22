@@ -26,8 +26,8 @@
           <el-input v-model="formLabelAlign.name"></el-input>
         </el-form-item>
       </el-form>
-      <el-dropdown split-button type="primary" trigger="click" @click="handleClick">
-        <svgicon :icon="selectIcon" width="48" height="48"/>
+      <el-dropdown class="dropdown" split-button type="primary" trigger="hover" @click="handleClick">
+        <svgicon :icon="selectIcon" width="26" height="26"/>
         <el-dropdown-menu slot="dropdown">
           <icon-box :iconList="iconList" :selectIcon="selectIconFun"></icon-box>
         </el-dropdown-menu>

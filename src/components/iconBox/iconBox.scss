@@ -1,1 +1,14 @@
 @import "base";
+
+.icon-box{
+    width: 280px;
+
+    .ul{
+        display:flex;
+        flex-wrap: wrap;
+        .li{
+            padding: 11px;
+            cursor: pointer;
+        }
+    }
+}
