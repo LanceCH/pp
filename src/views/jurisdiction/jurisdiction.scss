@@ -3,22 +3,54 @@
 .jurisdiction {
   padding: 20px;
   flex: 1;
-  flex-direction: column;
-  overflow: auto;
+  display: flex;
 
-  .header {
-    display: flex;
+  .left-list{
+    width: 200px;
+    height: 100%;
+    overflow: auto;
+    background: #55A3E3;
+    margin-right: 20px;
 
-    .control {
-      flex: 1;
-    }
-
-    .search-box {
-      width: 200px;
+    .li{
+      height: 45px;
+      color: #fff;
+      padding: 0 20px;
+      line-height: 45px;
+      font-size: 14px;
+      cursor: pointer;
+      &.active, &:hover{
+        background: #4E97DF;
+      }
     }
   }
 
-  .table-box {
-    margin: 10px 0;
+  .right-content{
+    flex: 1;
+
+    .header {
+      display: flex;
+  
+      .control {
+        flex: 1;
+      }
+  
+      .search-box {
+        width: 200px;
+      }
+    }
+
+    .table-box {
+      background: #fff;
+      padding: 20px;
+    }
+
+.tab-container{
+  background: #fff;
+  margin: 10px 0;
+  padding: 0 20px;
+}
+
+
   }
 }

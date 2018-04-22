@@ -108,8 +108,8 @@ export default {
     },
       watch: {
         $route(to) {
-            this.showHomeList = !(
-                to.name.includes('application')
+            this.showHomeList = (
+                to.name === 'Home'
             )
         }
     }

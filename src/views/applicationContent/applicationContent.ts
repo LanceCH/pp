@@ -20,6 +20,11 @@ export default class ApplicationContent extends Vue {
   dragLevel: number = null // 拖动对象等级
   dragParent = null
   fileTitle: string = '' // 二级标题
+  addGroupDialogVisible: boolean = false //新建分组
+
+  addGroupForm={
+    groupName: ''
+  }
 
   mounted() {
     this.getTree()
@@ -77,5 +82,27 @@ export default class ApplicationContent extends Vue {
       console.log(res)
       this.navData = res.data
     })
+  }
+  /**
+   * 新建分组
+  */
+  addGroup() {
+    this.addGroupDialogVisible = true
+  }
+  handleClose(){
+    this.addGroupDialogVisible = false
+  }
+  /**
+   * 提交新建分组
+   */
+  submit() {
+    console.log(this.addGroupForm.groupName)
+    if (this.addGroupForm.groupName === '') {
+      return this.$message({
+        message: '分组名称不能为空',
+        type:'error'
+      })
+    }
+    this.addGroupDialogVisible = false
   }
 }

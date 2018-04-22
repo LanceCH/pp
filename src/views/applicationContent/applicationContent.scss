@@ -15,8 +15,16 @@
     padding: 20px;
     display:flex;
     flex-direction: column;
-    *{
-      color: #72BCEF;
+    .el-breadcrumb {
+      *{
+        color: #72BCEF;
+      }
+    }
+
+    .header{
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
     }
   }
 }

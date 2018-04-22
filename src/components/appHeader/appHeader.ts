@@ -18,6 +18,11 @@ export default class AppHeader extends Vue {
     } else {
       this.navVisible = true
     }
+    if(location.href.includes('jurisdiction')) {
+      this.activeIndex = '3'
+    } else if(location.href.includes('organization')) {
+      this.activeIndex = '2'
+    }
   }
 
   @Watch('$route.path')

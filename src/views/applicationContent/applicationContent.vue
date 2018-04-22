@@ -15,11 +15,14 @@
       </el-tree>
     </div>
     <div class="right-content">
-      <el-breadcrumb separator-class="el-icon-arrow-right">
-        <el-breadcrumb-item :to="{ path: '/application' }">应用管理</el-breadcrumb-item>
-        <el-breadcrumb-item>{{appDetail.title}}</el-breadcrumb-item>
-        <el-breadcrumb-item v-if="fileTitle">{{fileTitle}}</el-breadcrumb-item>
-      </el-breadcrumb>
+      <div class="header">
+        <el-breadcrumb separator-class="el-icon-arrow-right">
+          <el-breadcrumb-item :to="{ path: '/application' }">应用管理</el-breadcrumb-item>
+          <el-breadcrumb-item>{{appDetail.title}}</el-breadcrumb-item>
+          <el-breadcrumb-item v-if="fileTitle">{{fileTitle}}</el-breadcrumb-item>
+        </el-breadcrumb>
+        <el-button @click="addGroup" type="primary" v-if="fileTitle">新建分组</el-button>
+      </div>
       <div class="add-flie-container">
         <div class="add-box"  v-if="fileTitle">
           <img :src="require('../../images/yy2_03.png')" width="148" height="170">
@@ -40,6 +43,22 @@
         </div>
       </div>
     </div>
+  <!-- 新建分组 -->
+  <el-dialog
+    title="新建分组"
+    :visible.sync="addGroupDialogVisible"
+    width="30%"
+    :before-close="handleClose">
+<el-form :inline="true" :model="addGroupForm" class="demo-form-inline">
+  <el-form-item label="分组名称">
+    <el-input v-model="addGroupForm.groupName" placeholder="分组名称"></el-input>
+  </el-form-item>
+</el-form>
+    <span slot="footer" class="dialog-footer">
+      <el-button @click="addGroupForm.groupName = ''">重置</el-button>
+      <el-button type="primary" @click="submit">确 定</el-button>
+    </span>
+</el-dialog>
   </div>
 </template>
 <style src="./applicationContent.scss" lang="scss" scoped></style>
