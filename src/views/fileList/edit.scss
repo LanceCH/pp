@@ -1,0 +1,20 @@
+@import "base";
+
+/deep/ .distpicker {
+    > select {
+        height: 40px;
+        line-height: 40px;
+        padding: 0 5px;
+        font-size: 14px;
+    }
+}
+
+.file-container{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: #fff;
+    z-index: 10;
+}

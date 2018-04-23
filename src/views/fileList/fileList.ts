@@ -1,9 +1,13 @@
 import Vue from 'util/vueExt'
 import { Component } from 'vue-property-decorator'
 import Template from './fileList.vue'
+import Edit from './edit.vue'
 
 @Component({
-  mixins: [Template]
+  mixins: [Template],
+  components:{
+    Edit
+  }
 })
 export default class FileList extends Vue {
   form = {
@@ -11,6 +15,8 @@ export default class FileList extends Vue {
     department: '',
     gangwei: ''
   }
+
+  showEdit: boolean = false
 
   value4 = [new Date(2000, 10, 10, 10, 10), new Date(2000, 10, 11, 10, 10)]
 
@@ -47,9 +53,13 @@ export default class FileList extends Vue {
   /**
    * 查看
   */
-  handleRead() {}
+  handleRead() {
+    this.showEdit = true
+  }
   /**
    * 编辑
   */
-  handleEdit() {}
+  handleEdit() {
+    this.showEdit = true
+  }
 }

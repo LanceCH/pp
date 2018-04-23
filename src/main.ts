@@ -13,6 +13,7 @@ import * as VueDND from 'awe-dnd'
 // import all icons
 import 'components/icons'
 
+import VDistpicker from 'v-distpicker'
 import Grid  from 'vue-js-grid'
 Vue.use(Grid)
 Vue.use(svgicon, {
@@ -20,6 +21,7 @@ Vue.use(svgicon, {
 })
 Vue.use(ElementUI)
 Vue.use(VueDND)
+Vue.component('v-distpicker', VDistpicker)
 if (process.env.APP_ENV === 'prod') {
   Vue.use(VueAnalytics, {
     id: 'UA-105253274-2',

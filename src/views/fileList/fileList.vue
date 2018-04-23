@@ -56,15 +56,16 @@
           </el-table-column>
           <el-table-column prop="control" width="150" sortable label="流程状态">
           </el-table-column>
-          <el-table-column fixed="right" width="150" label="操作">
+          <el-table-column fixed="right" width="240" label="操作">
             <template slot-scope="scope">
-              <el-button size="mini" @click="handleRead">查看</el-button>
-              <el-button size="mini" @click="handleEdit">编辑</el-button>
+              <el-button size="mini" @click="handleRead" type="primary">查看</el-button>
+              <el-button size="mini" @click="handleEdit" type="primary">编辑</el-button>
               <el-button size="mini" type="danger" @click="handleDelete">删除</el-button>
             </template>
           </el-table-column>
         </el-table>
       </div>
+      <edit v-if="showEdit"></edit>
     </div>
   </div>
 </template>
