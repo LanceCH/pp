@@ -65,7 +65,7 @@
           </el-table-column>
         </el-table>
       </div>
-      <edit v-if="showEdit"></edit>
+      <edit v-if="showEdit" :close="() => {this.showEdit = false}"></edit>
     </div>
   </div>
 </template>

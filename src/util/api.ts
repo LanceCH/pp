@@ -14,3 +14,17 @@ export function organizationTree(data) {
 export function jurisdictionTree(data) {
   return http.get('33586/jurisdictionTree', data)
 }
+
+// 部门列表
+export function getDept(data) {
+  return http.get('/33724/getDept', data)
+} 
+// 根据部门获取人员
+export function getPerson(data) {
+  return http.get('/33724/getPerson', data)
+}
+
+// 获取家庭信息
+export function getFamily(data) {
+  return http.get('/33724/getFamily', data)
+}
